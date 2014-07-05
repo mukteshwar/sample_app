@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Catch Your Lead</title>
+<link href="css/reset.css" media="all" rel="stylesheet" />
+<link href="css/style.css" media="all" rel="stylesheet" />
+<link href="css/jquery-ui.css" media="all" rel="stylesheet" />
+<script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+<script language="javascript" src="js/jquery-ui.min.js" type="text/javascript"></script>
+<script language="javascript" src="js/custom.js" type="text/javascript"></script>
+<script>
+$(function() {
+	$( "#fromdate, #todate" ).datepicker({
+		showOn: "button",
+		buttonImage: "assets/calendar.gif",
+		buttonImageOnly: true,
+		dateFormat:"dd-mm-yy",
+		maxDate:0
+	});
+});
+
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
+  
+<!-- Additional IE/Win specific style sheet (Conditional Comments) -->
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+
+</head>
+
+<body>
+<!-- Container -->
+<div class="main_container">
+	<!-- Header -->
+    <div class="header_container">
+	<div class="header">
+		<div class="logo"><img src="assets/logo.png" alt="ACL Mobile" /></div>
+        <div class="client_logo"><img src="assets/lml.jpg" alt="indiaproperty.com" /></div>
+        <!-- ACC Info -->   
+        <div class="acc_info">
+            <div class="loglink">            	
+                <ul>
+                    <li><a href="change-password.html" class="buttonlink">Change Password</a></li>
+                    <li><a href="login.html" class="buttonlink">Logout</a></li>
+                </ul>
+            </div>
+         </div>
+        <!-- //ACC Info -->
+        	
+        <!-- Top Navigation -->
+        <div class="topnav_cont">
+            <div class="topnav">
+                <ul class="mainnav">                    
+                    <li><a href="index.html" class="active">Agent Panel</a></li>
+                   
+                </ul>            
+            </div>
+        </div>
+        <!-- //Top Navigation -->	    
+    </div>
+    </div>
+	<!-- //Header -->  
+    
+    <!-- Subnav -->  
+    <!--<div class="subnav">
+        <ul>
+        	<li><a href="index.html">Dashboard</a></li>
+            <li><a href="summary-report.html" class="active">Summary Report</a></li>
+            <li><a href="detailed-report.html">Detailed Report</a></li>
+            <li><a href="top-caller-receiver-report.html">Top Caller/Receiver</a></li>
+            
+        </ul>         
+    </div>-->
+    <!-- //Subnav -->
+    
+	<!-- Body -->
+	<div class="body_container">
+    
+    	<!-- Right Content -->         
+		<div class="fulcontent">
+            <div class="heading headmis"><h2>Agent Panel</h2></div>
+            <div class="search_bar"> 
+             <form method="post" action="delhi.html">
+          		<ul class="padbot">                    
+					
+                     <li><label>Select State:</label> 
+                    	<select id="timeframe" class="text" required>
+                        <option value="" selected="selected">Please Select</option>
+                        <option value="4">Delhi</option>
+                        <option value="5">Punjab</option>
+                        
+                        
+							
+                        </select></li>
+					 <li id="fdate4">
+                     <label>Select Zone:</label> 
+						<select id="timeframe" class="text" required>
+                        <option value="4" selected="selected">Please Select</option>
+                        <option value="">South Delhi</option>
+                        <option value="">East Delhi</option>
+                        <option value="">West Delhi</option>
+                        <option value="">North Delhi</option>
+                        <option value="">North West </option>
+                        <option value="">Delhi</option>
+                        <option value="">North East Delhi</option>
+                        <option value="">Central Delhi</option>
+                        <option value="">South West Delhi</option>
+                        </select>
+					</li>
+                    
+					<li id="fdate5">
+                    <label>Select City:</label> 
+						<select id="timeframe1" class="text" required>
+                         <option value="4" selected="selected">Please Select</option>
+                        <option value="">Ludhiana</option>
+                        <option value="">Amritsar</option>
+                        <option value="">Jalandhar</option>
+                        <option value="">Amritsar</option>
+                        <option value="">Patiala</option>
+                        <option value="">Bathinda</option>
+                        <option value="">SAS Nagar</option>
+                        <option value="">Hoshiarpur</option>
+                        <option value="">Pathankot</option>
+                        <option value="">Batala</option>
+                        <option value="">Abohar</option>
+                        <option value="">Malerkotla</option>
+                        <option value="">Khanna</option>
+                        <option value="">Phagwara</option>
+                        <option value="">Muktasar</option>
+                        <option value="">Barnala</option>
+                        <option value="">Rajpura</option>
+                        <option value="">Firozpur</option>
+                        <option value="">Kapurthala</option>
+                        </select>
+					</li>
+                    
+              
+                   
+                   
+                   
+                    <li>
+                    <button type="submit" class="bttn">Submit</button>
+                    <!--<input value="submit" class="bttn" type="button" />--></li>
+                </ul>
+                
+                </form>
+          	</div>                                    
+            
+            
+    	</div>
+        <!-- //Right Cont-->
+	</div>
+	<!-- //Body -->
+        
+    <!-- Footer -->
+	
+    <!-- //Footer -->
+</div>
+<!-- //Container -->
+
+
+
+<div class="footer">
+    	<ul class="foot_links">
+        	<li>Powered by ACL Mobile Limited.</li>                
+        </ul>        
+    </div>
+<script>
+
+$(document).ready(function(){
+	$("#fdate4").hide("");
+	$("#timeframe").change(function(){
+		if ($(this).val() == "4" ) {
+			$("#fdate4").show("");
+		} else {
+			$("#fdate4").hide("");
+		}
+	});
+});
+
+$(document).ready(function(){
+	$("#fdate5").hide("");
+	$("#timeframe").change(function(){
+		if ($(this).val() == "5" ) {
+			$("#fdate5").show("");
+		} else {
+			$("#fdate5").hide("");
+		}
+	});
+});
+
+
+
+</script>
+
+<script type="text/javascript"> 
+ 
+ $(document).ready(function () { 
+ 
+ //called when key is pressed in textbox 
+ 
+ $(".numeric_value").keypress(function (e) { 
+ 
+ //if the letter is not digit then display error and don't type anything 
+ 
+ if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) { 
+ 
+ $("#errmsg").html("Digits Only").show().fadeOut("slow"); 
+ 
+ return false; 
+ 
+ } 
+ 
+ }); 
+ 
+ }); 
+ 
+  
+ </script> 
+
+
+
+</body>
+</html>
